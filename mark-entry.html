@@ -1,0 +1,18 @@
+document.getElementById('saveBtn').onclick = async () => {
+    const rows = document.querySelectorAll(".row");
+    for(let r of rows) {
+        const id = r.dataset.id;
+        await setDoc(doc(db, "results", `${id}_${task.subj}`), {
+            studentId: id, 
+            subject: task.subj, 
+            cls: task.cls,
+            test1: r.querySelector('.t1').value,
+            midTerm: r.querySelector('.mid').value,
+            test2: r.querySelector('.t2').value,
+            exam: r.querySelector('.ex').value,
+            average: r.querySelector('.avg').innerText,
+            grade: r.querySelector('.grade').innerText
+        }, { merge: true });
+    }
+    alert("Success!");
+};
