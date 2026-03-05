@@ -1,0 +1,17 @@
+<div class="main-content">
+    <h2>Student Management</h2>
+    <div class="toolbar">
+        <input type="text" id="newName" placeholder="Full Name">
+        <select id="newSex"><option>Male</option><option>Female</option></select>
+        <select id="newCls"><option>Form 1</option><option>Form 2</option></select>
+        <button onclick="addStudent()">Add Student</button>
+    </div>
+    <div class="csv-actions">
+        <button onclick="downloadCSVTemplate()">Download Template</button>
+        <input type="file" id="csvFile" onchange="uploadCSV()">
+    </div>
+    <table id="studTable">
+        <thead><tr><th>Name</th><th>Sex</th><th>Class</th><th>Actions</th></tr></thead>
+        <tbody id="studBody"></tbody>
+    </table>
+</div>
