@@ -1,0 +1,35 @@
+:root {
+    --primary-blue: #1a237e;
+    --accent-gold: #c5a059;
+    --success-green: #2e7d32;
+    --danger-red: #d32f2f;
+    --bg-light: #f4f7f6;
+    --white: #ffffff;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-light);
+    margin: 0;
+}
+
+nav {
+    background: var(--primary-blue);
+    border-bottom: 3px solid var(--accent-gold);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 12px;
+}
